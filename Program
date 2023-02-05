@@ -11,12 +11,12 @@
 	
 	int rep=5;
 	int n=1;
-	   // Edw diavazei thn ip se dekadikh morfh xwrismenh me teleies
+	   // read ip address in decimal notation with dots
 	printf("Enter 32-bit IP address in dotted decimal notation (xxx.xxx.xxx.xxx)\n: ");
 	scanf ("%d.%d.%d.%d",&decip[1],&decip[2],&decip[3],&decip[4]);
     printf("\n\n\n\n\n");
 	
-	
+	//the results of ip in binary
 	printf ("The decip is: %d.%d.%d.%d\n",decip[1],decip[2],decip[3],decip[4]);
 	printf ("The binip is:");
 	
