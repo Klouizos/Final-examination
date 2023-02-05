@@ -37,7 +37,7 @@
 		   
 
 		int j = i-1;
-			  
+	  //Prints dots in-between each binary group  
 		while (j >= 0){
 			printf("%d", bin[j]);
 			j--;
