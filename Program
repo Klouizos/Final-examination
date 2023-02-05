@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 
-
+	
 	void d2b(){
 	
 
@@ -31,7 +31,7 @@
 		int bin[32]; 
 		int i=0;
 		int dec=decip[n];
-		   
+	   // Converts decimal to binary   
 		while ( dec > 0 ){
 			bin[i++] = dec % 2;
 			dec = dec / 2;
@@ -71,7 +71,7 @@
 	
 	while ( n < rep ){
 		
-
+	    //check ip validity
 		if ( binip[n] > 11111111 || binip[n] < 0){
 			printf("Invalid input string (incorrect numbers for IP address)\n");
 		}
@@ -84,7 +84,7 @@
 		
 		bin = binip[n];
 		int tmp = bin;
-		
+	    //Converts binary to Decimal
 		while ( tmp > 0  ) {
 		
 		rem  = tmp % 10;
@@ -118,13 +118,13 @@ int main()
 
 	switch(choice)
 	{
-		case 1: b2d();	break;
+		case 1: b2d();	break; //Executes first void function
 			
-		case 2:d2b();	break;
+		case 2:d2b();	break; //Executes second void function
 		
-		case 3:printf("Exiting program!\n"); exit(0); break;
+		case 3:printf("Exiting program!\n"); exit(0); break; //Exists Proggram
             
-		default: printf("Invalid choice!\n"); break;
+		default: printf("Invalid choice!\n"); break; //If input is invalid prints "Invalid choice"
 			
 	
 	}
