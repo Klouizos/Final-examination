@@ -2,16 +2,14 @@
 #include <stdlib.h>
 
 
-	
 	void d2b(){
 	
 
 	int decip[4];
-	
-	
 	int rep=5;
 	int n=1;
-	   // read ip address in decimal notation with dots
+	
+	// read ip address in decimal notation with dots
 	printf("Enter 32-bit IP address in dotted decimal notation (xxx.xxx.xxx.xxx)\n: ");
 	scanf ("%d.%d.%d.%d",&decip[1],&decip[2],&decip[3],&decip[4]);
     printf("\n\n\n\n\n");
@@ -22,16 +20,16 @@
 	
 	while ( n < rep ){
 		
-		//check ip validity
+	  //check ip validity
 		if ( decip[n] > 255 || decip[n] < 0){
 			printf("Invalid input string (incorrect numbers for IP address)\n");
 		}
 
-	
+	   // convert each decimal group to binary
 		int bin[32]; 
 		int i=0;
 		int dec=decip[n];
-	   // Converts decimal to binary   
+		   
 		while ( dec > 0 ){
 			bin[i++] = dec % 2;
 			dec = dec / 2;
@@ -49,21 +47,18 @@
 		}
 		++n;
 	
-	}
-	
+	}	
 }
 	
 	void b2d(){
 	
 
 	int binip[4];
-	
-
 	int decip[4];
-	
 	int rep=5;
 	int n=1;
 	
+	// read ip address in binary notation with dots
 	printf("Enter 32-bit IP address in dotted binary notation (xxx.xxx.xxx.xxx)\n: ");
 	scanf ("%d.%d.%d.%d",&binip[1],&binip[2],&binip[3],&binip[4]);
 	
@@ -71,12 +66,12 @@
 	
 	while ( n < rep ){
 		
-	    //check ip validity
+        // only 0 and 1 accepted
 		if ( binip[n] > 11111111 || binip[n] < 0){
 			printf("Invalid input string (incorrect numbers for IP address)\n");
 		}
 		
-		
+		// convert each binary group to decimal number
 		int dec=0;
 		int base=1;
 		int bin;
@@ -84,7 +79,7 @@
 		
 		bin = binip[n];
 		int tmp = bin;
-	    //Converts binary to Decimal
+		
 		while ( tmp > 0  ) {
 		
 		rem  = tmp % 10;
@@ -97,15 +92,14 @@
 		decip[n] = dec;
 		++n;
 		
-	
 	}
+	
+	//the results of ip in decimal
     printf("\n\n\n\n\n");
 	printf ("The binip is: %d.%d.%d.%d\n",binip[1],binip[2],binip[3],binip[4]);
 	printf ("The decip is: %d.%d.%d.%d",decip[1],decip[2],decip[3],decip[4]);
-
-	
-
 }
+
 
 int main()
 {
@@ -118,18 +112,15 @@ int main()
 
 	switch(choice)
 	{
-		case 1: b2d();	break; //Executes first void function
+		case 1: b2d();	break;  //execute the first void function
 			
-		case 2:d2b();	break; //Executes second void function
+		case 2:d2b();	break;  //execute the second void function
 		
-		case 3:printf("Exiting program!\n"); exit(0); break; //Exists Proggram
+		case 3:printf("Exiting program!\n"); exit(0); break; //quitting the program
             
-		default: printf("Invalid choice!\n"); break; //If input is invalid prints "Invalid choice"
+		default: printf("Invalid choice!\n"); break;
 			
-	
 	}
-	
-	
 	
 	return 0;
 }
